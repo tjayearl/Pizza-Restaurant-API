@@ -21,4 +21,8 @@ def create_app():
     app.register_blueprint(pizza_bp)
     app.register_blueprint(restaurant_pizza_bp)
 
+    @app.route("/")
+    def index():
+        return "Welcome to the Pizza API!"
+
     return app
